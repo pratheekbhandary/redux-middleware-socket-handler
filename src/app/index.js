@@ -1,25 +1,20 @@
 import { makeStore } from './store';
 import React from 'react';
+import { Provider } from 'react-redux'
 import { render } from 'react-dom';
-import App from './App';
-import SocketCustomWrapper from '../socket';
-
-// See this function for an example of how to send messages and how to
-// subscribe and listen for messages
-const example = (socket) => {
-  socket.emit('message', 'hello world')
-  socket.on('message', msg => {
-    console.log('Received message: ', msg)
-  })
-}
+import App from './components/App';
+import SocketCustomWrapper from './socket';
 
 const main = () => {
   const socket = SocketCustomWrapper.createSocketConnection('localhost:9001');
   const store = makeStore();
+  SocketCustomWrapper.initializeListening(socket,store.dispatch);
 
   const app = (
-    <App socket={socket} />
-  )
+    <Provider store={store}>
+        <App />
+    </Provider>
+  );
 
   render(app, document.getElementById('app-root'))
 }

@@ -14,12 +14,16 @@
     "@babel/preset-react": "^7.0.0",
     "eslint": "^5.14.1",
     "express": "^4.16.4",
+    "nodemon": "^1.18.10",
     "parcel-bundler": "^1.11.0",
     "socket.io": "^2.2.0"
   },
   "dependencies": {
+    "random-sentence": "^1.0.4",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "redux": "^4.0.1"
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6"
   }
 }
