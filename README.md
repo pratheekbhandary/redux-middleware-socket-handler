@@ -23,3 +23,7 @@
 2. Run `yarn start` to start the local development environment.
 3. Open `http://localhost:9000` in a browser.
 4. When done implementing the functionality, zip the contents of the repo (without `node_modules`) and return it via email.
+
+
+# Product Design
+Ui Prototype: https://github.com/pratheekbhandary/redux-middleware-socket-handler/blob/master/ChatBox.PNG
